@@ -46,3 +46,40 @@ class GFG {
 		}
 	}
 }
+
+
+
+
+
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class GFG {
+	public static void main (String[] args) throws IOException {
+		//code
+		Scanner sc=new Scanner(System.in);
+		int t=sc.nextInt();
+		sc.nextLine();
+		
+		while(t-->0)
+		{
+		   String str=sc.nextLine();
+		    char[] arr=str.toCharArray();
+		    int sum=0,maxsum=0;
+		   for(int i=0;i<arr.length;i++)
+		   {
+		       if(arr[i]>='0' && arr[i]<='9')
+		       {
+		           int x=(int)arr[i]-'0';
+		           sum=sum*10+x;
+		           
+		           if(sum>maxsum)
+		            maxsum=sum;
+		       }
+		       else sum=0;
+		   }
+		   System.out.println(maxsum);
+		}
+	}
+}
